@@ -15,12 +15,16 @@ class PedidoDAO:
             if not cliente or not vendedor:
                 print("Cliente ou vendedor não encontrado.")
                 return
+            
+            # Adicionei aqui a busca pra buscar o orderid, pra não precisar mexer no banco
+            cur.execute("SELECT COALESCE(MAX(orderid), 0) + 1 FROM northwind.orders")
+            orderId = cur.fetchone()[0]
 
             cur.execute("""
-                INSERT INTO northwind.orders (customerid, employeeid, orderdate)
-                VALUES (%s, %s, %s)
+                INSERT INTO northwind.orders (orderid, customerid, employeeid, orderdate)
+                VALUES (%s, %s, %s, %s)
                 RETURNING orderid
-            """, (cliente[0], vendedor[0], dataPedido))
+            """, (orderId, cliente[0], vendedor[0], dataPedido))
             order_id = cur.fetchone()[0]
             print("Pedido criado com ID:", order_id)
 
