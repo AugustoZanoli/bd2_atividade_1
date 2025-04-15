@@ -1,15 +1,15 @@
 from db.connect import connect
 
 class PedidoDAO:
-    def inserir_pedido(self, nome_cliente, nome_vendedor, data_pedido, itens):
+    def inserirPedido(self, nomeCliente, nomeVendedor, dataPedido, itens):
         conn = connect()
         cur = conn.cursor()
 
         try:
-            cur.execute("SELECT customerid FROM northwind.customers WHERE contactname = %s", (nome_cliente,))
+            cur.execute("SELECT customerid FROM northwind.customers WHERE contactname = %s", (nomeCliente,))
             cliente = cur.fetchone()
 
-            cur.execute("SELECT employeeid FROM northwind.employees WHERE firstname || ' ' || lastname = %s", (nome_vendedor,))
+            cur.execute("SELECT employeeid FROM northwind.employees WHERE firstname || ' ' || lastname = %s", (nomeVendedor,))
             vendedor = cur.fetchone()
 
             if not cliente or not vendedor:
@@ -20,7 +20,7 @@ class PedidoDAO:
                 INSERT INTO northwind.orders (customerid, employeeid, orderdate)
                 VALUES (%s, %s, %s)
                 RETURNING orderid
-            """, (cliente[0], vendedor[0], data_pedido))
+            """, (cliente[0], vendedor[0], dataPedido))
             order_id = cur.fetchone()[0]
             print("Pedido criado com ID:", order_id)
 

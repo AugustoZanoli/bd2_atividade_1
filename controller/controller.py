@@ -1,7 +1,7 @@
 from dao.dao import PedidoDAO
-from view.view import formulario_insercao
+from view.view import formsInserir
 
-def executar_insercao():
-    nome_cliente, nome_vendedor, data_pedido, itens = formulario_insercao()
+def executarInsercao():
+    nomeCliente, nomeVendedor, dataPedido, itens = formsInserir()
     dao = PedidoDAO()
-    dao.inserir_pedido(nome_cliente, nome_vendedor, data_pedido, itens)
+    dao.inserirPedido(nomeCliente, nomeVendedor, dataPedido, itens)
