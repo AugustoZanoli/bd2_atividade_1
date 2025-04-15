@@ -1,4 +1,4 @@
-from db.connect import connect
+from implementacao_psycopg.db.connect import connect
 
 class PedidoDAO:
     def inserirPedido(self, nomeCliente, nomeVendedor, dataPedido, itens):
