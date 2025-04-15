@@ -1,4 +1,4 @@
-from implementacao_psycopg.controller.controller import executarInsercao
+from questionario import questionario
 
 if __name__ == "__main__":
-    executarInsercao()
+    questionario()
