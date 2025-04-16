@@ -86,7 +86,7 @@ python main.py
 ## ✅ **Checklist da Entrega**
 
 - [x] Inserção de pedido com `psycopg`
-- [ ] Simulação de SQL Injection (modo vulnerável e seguro)
+- [x] Simulação de SQL Injection (modo vulnerável e seguro)
 - [ ] Implementação com `SQLAlchemy`
 - [x] Relatório de pedido
 - [x] Relatório de ranking de funcionários
