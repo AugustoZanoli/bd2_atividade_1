@@ -5,10 +5,13 @@ class PedidoDAO:
     # SQL Injection, passando os parametros direto na query
     def inserirPedidoInjection(self, nomeCliente, nomeVendedor, dataPedido, itens):
         conn = connect()
+        conn.set_session(autocommit=True)
         cur = conn.cursor()
 
         try:
             queryCliente = f"SELECT customerid FROM northwind.customers WHERE contactname = '{nomeCliente}'"
+            print("Query SQL gerada:", queryCliente)
+
             cur.execute(queryCliente)
             cliente = cur.fetchone()
 
@@ -29,6 +32,7 @@ class PedidoDAO:
                 INSERT INTO northwind.orders (orderid, customerid, employeeid, orderdate)
                 VALUES ({orderId}, '{cliente[0]}', {vendedor[0]}, '{dataPedido}')
             """
+            print("Inserindo pedido com SQL:", queryParaInserir)
             cur.execute(queryParaInserir)
 
             for item in itens:
@@ -39,12 +43,10 @@ class PedidoDAO:
                 """
                 cur.execute(insert_item_query)
 
-            conn.commit()
-            print("Commit feito com sucesso! Pedido inserido.")
+            print("Pedido e itens inseridos com sucesso (autocommit ativo).")
 
         except Exception as e:
-            conn.rollback()
-            print("Erro ao inserir pedido:", e)
+            print("Erro ao inserir pedido (nenhum rollback pois autocommit está ativado):", e)
 
         finally:
             cur.close()

@@ -28,8 +28,8 @@ def fluxo():
         case = int(input())
 
         if case == 1:
-                executarInsercao()
-        elif case == 2:
                 executarInsercaoInjection()
+        elif case == 2:
+                executarInsercao()
         else:
                 fluxo()
