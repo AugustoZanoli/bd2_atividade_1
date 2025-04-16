@@ -5,3 +5,8 @@ def executarInsercao():
     nomeCliente, nomeVendedor, dataPedido, itens = formsInserir()
     dao = PedidoDAO()
     dao.inserirPedido(nomeCliente, nomeVendedor, dataPedido, itens)
+
+def executarInsercaoInjection():
+    nomeCliente, nomeVendedor, dataPedido, itens = formsInserir()
+    dao = PedidoDAO()
+    dao.inserirPedidoInjection(nomeCliente, nomeVendedor, dataPedido, itens)
