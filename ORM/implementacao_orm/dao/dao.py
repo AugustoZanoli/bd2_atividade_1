@@ -1,6 +1,6 @@
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import func, and_
-from implementacao_orm.model.model import Customer, Order, OrderDetail, Employee, Product
+from ORM.implementacao_orm.model.model import Customer, Order, OrderDetail, Employee, Product
 
 class DAO:
     def __init__(self, engine):

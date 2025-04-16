@@ -10,7 +10,6 @@ class PedidoDAO:
 
         try:
             queryCliente = f"SELECT customerid FROM northwind.customers WHERE contactname = '{nomeCliente}'"
-            print("Query SQL gerada:", queryCliente)
 
             cur.execute(queryCliente)
             cliente = cur.fetchone()
@@ -32,7 +31,6 @@ class PedidoDAO:
                 INSERT INTO northwind.orders (orderid, customerid, employeeid, orderdate)
                 VALUES ({orderId}, '{cliente[0]}', {vendedor[0]}, '{dataPedido}')
             """
-            print("Inserindo pedido com SQL:", queryParaInserir)
             cur.execute(queryParaInserir)
 
             for item in itens:

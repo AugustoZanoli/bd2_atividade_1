@@ -1,5 +1,5 @@
-from implementacao_orm.dao.dao import DAO
-from implementacao_orm.view.view import View
+from ORM.implementacao_orm.dao.dao import DAO
+from ORM.implementacao_orm.view.view import View
 
 class Controller:
     def __init__(self, dao: DAO):

@@ -1,7 +1,7 @@
-from implementacao_orm.controller.controller import Controller
-from implementacao_orm.dao.dao import DAO
-from implementacao_orm.view.view import View
-from implementacao_orm.db.connect import connect 
+from ORM.implementacao_orm.controller.controller import Controller
+from ORM.implementacao_orm.dao.dao import DAO
+from ORM.implementacao_orm.view.view import View
+from ORM.implementacao_orm.db.connect import connect 
 
 def questionario():
     engine = connect()

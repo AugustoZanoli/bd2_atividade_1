@@ -1,4 +1,4 @@
-from questionario import questionario
+from selecionarModelo import selecionarModelo
 
 if __name__ == "__main__":
-    questionario()
+    selecionarModelo()
