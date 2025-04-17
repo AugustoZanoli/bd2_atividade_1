@@ -14,5 +14,5 @@ def selecionarModelo():
         elif case == 2:
                 questionarioORM()
         else:
-                print('Opção inválida!')
+                print('Opção inválida! Tente Novamente.')
                 selecionarModelo()

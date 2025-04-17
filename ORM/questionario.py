@@ -33,4 +33,4 @@ def questionario():
         print("Encerrando o programa.")
 
     else:
-        print("Opção inválida.")
+        print("Opção inválida! Tente novamente.")
