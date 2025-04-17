@@ -94,10 +94,10 @@ python main.py
 
 - [x] Inserção de pedido com `psycopg`
 - [x] Simulação de SQL Injection (modo vulnerável e seguro)
-- [ ] Implementação com `SQLAlchemy`
+- [x] Implementação com `SQLAlchemy`
 - [x] Relatório de pedido
 - [x] Relatório de ranking de funcionários
-- [ ] Documento com nomes dos integrantes, link do repositório e vídeo
+- [x] Documento com nomes dos integrantes, link do repositório e vídeo
 
 ---
 
