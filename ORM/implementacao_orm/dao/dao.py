@@ -71,7 +71,7 @@ class DAO:
 
             print(f"\nNúmero do pedido: {order.order_id}")
             print(f"Data do pedido: {order.order_date}")
-            print(f"Nome do cliente: {customer.company_name}")
+            print(f"Nome do cliente (empresa): {customer.company_name}")
             print(f"Nome do vendedor: {employee.first_name} {employee.last_name}\n")
             print("Itens:")
 

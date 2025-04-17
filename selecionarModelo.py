@@ -5,7 +5,7 @@ from implementacao_psycopg.questionario import questionario as questionarioPsyco
 def selecionarModelo():
         print('Selecione qual implementação deseja utilizar:')
         print('1 - Psycopg')
-        print('2 - ORM SqlAclchemy')
+        print('2 - ORM SqlAlchemy')
 
         case = int(input())
 
@@ -14,4 +14,5 @@ def selecionarModelo():
         elif case == 2:
                 questionarioORM()
         else:
+                print('Opção inválida!')
                 selecionarModelo()

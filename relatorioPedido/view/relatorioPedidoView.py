@@ -9,7 +9,7 @@ def mostrarPedido(pedido):
     
     print(f"\nNúmero do pedido: {pedido['orderid']}")
     print(f"Data do pedido: {pedido['orderdate']}")
-    print(f"Nome do cliente: {pedido['cliente']}")
+    print(f"Nome do cliente (empresa): {pedido['cliente']}")
     print(f"Nome do vendedor: {pedido['vendedor']}")
     print("\nItens:")
     for item in pedido["itens"]:
