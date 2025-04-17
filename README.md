@@ -52,6 +52,7 @@ implementacao_psycopg/
   |- db/
   |- models/
   |- view/
+  |- questionario.py
 
 relatorioFuncionario/
   |- controller/
@@ -64,7 +65,13 @@ relatorioPedido/
   |- view/
 
 orm_sqlalchemy/
-  |- ... 
+  |- implementacao_orm/
+    |- controller/
+    |- dao/
+    |- db/
+    |- models/
+    |- view/
+  |- questionario.py
 ```
 
 ---
