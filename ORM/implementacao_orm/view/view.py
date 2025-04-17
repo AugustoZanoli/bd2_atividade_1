@@ -13,7 +13,7 @@ class View:
                 order_date = datetime.strptime(data_pedido_input, "%Y-%m-%d")
                 break
             except ValueError:
-                print("Data inválida. Use o formato YYYY-MM-DD.")
+                print("Data inválida! Use o formato YYYY-MM-DD.")
 
         # Cria uma lista para armazenar os itens do pedido
         order_details = []
