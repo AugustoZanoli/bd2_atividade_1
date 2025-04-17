@@ -80,7 +80,7 @@ orm_sqlalchemy/
 
 1. Crie e configure o banco de dados Northwind no PostgreSQL.
 2. Execute o script de criação de chaves estrangeiras, se necessário.
-3. Se não tiver criado o usuário, crie e forneça o acesso à tabela no pgAdmin:
+3. Se não tiver criado o usuário, crie e forneça o acesso ao banco de dados no pgAdmin:
 
 ```bash
 CREATE USER usuario WITH PASSWORD 'senha';
